@@ -1,0 +1,172 @@
+/* Word Match Styles */
+
+.word-match-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.word-match-instruction {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.word-match-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.word-match-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.word-match-column h3 {
+  text-align: center;
+  font-size: 20px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.match-btn {
+  padding: 20px;
+  border: 3px solid #ddd;
+  border-radius: 12px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 18px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.match-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-color: #999;
+}
+
+.match-btn.kanji {
+  position: relative;
+}
+
+.match-btn.kanji .kanji-text {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.match-btn.kanji .reading-text {
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.match-btn.meaning {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.match-btn.selected {
+  background: #e3f2fd;
+  border-color: #2196f3;
+  border-width: 4px;
+}
+
+.match-btn.matched {
+  background: #c8e6c9;
+  border-color: #4caf50;
+  cursor: default;
+  opacity: 0.7;
+}
+
+.match-btn.matched:hover {
+  transform: none;
+}
+
+.match-btn .audio-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.word-match-progress {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+}
+
+.word-match-complete {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.continue-btn {
+  padding: 15px 40px;
+  background: #58cc02;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.continue-btn:hover {
+  background: #46a302;
+  transform: scale(1.05);
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  75% { transform: translateX(10px); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .word-match-grid {
+    gap: 20px;
+  }
+  
+  .match-btn {
+    padding: 15px;
+    font-size: 16px;
+    min-height: 70px;
+  }
+  
+  .match-btn.kanji .kanji-text {
+    font-size: 28px;
+  }
+  
+  .match-btn.kanji .reading-text {
+    font-size: 10px;
+  }
+  
+  .match-btn.meaning {
+    font-size: 16px;
+  }
+}
