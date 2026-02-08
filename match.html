@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,4 +37,44 @@
   <script src="js/shared.js"></script>
   <script src="js/match.js"></script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word Match</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/match.css">
+</head>
+<body>
+  <div class="header">
+    <button class="back-btn" onclick="backToLevels()">← Back to Levels</button>
+    <h2 id="current-level-title">Level 2</h2>
+  </div>
+
+  <div class="level-info">
+    <div class="quiz-counter">
+      Round <span id="current-quiz">1</span> / 10
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+    </div>
+  </div>
+
+  <div class="quiz-container" id="quiz-container">
+    <!-- Word match content will be dynamically inserted here -->
+  </div>
+
+  <div class="controls">
+    <button class="toggle-btn" id="romaji-toggle" onclick="toggleRomaji()">Romaji</button>
+    <button class="toggle-btn" id="furigana-toggle" onclick="toggleFurigana()">Furigana</button>
+  </div>
+
+  <script src="kanji-data.js"></script>
+  <script src="audio-data.js"></script>
+  <script src="js/shared.js"></script>
+  <script src="js/match.js"></script>
+</body>
+>>>>>>> 16563c21a400b149d6097722c8c54f8050f6e522
 </html>
