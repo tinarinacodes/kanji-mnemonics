@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kanji Learning Game</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <!-- Level Selection Screen -->
+  <div id="level-selection-screen">
+    <div class="header">
+      <h1>🇯🇵 Kanji Learning</h1>
+      <button class="reset-btn" onclick="resetProgress()">Reset Progress</button>
+    </div>
+    
+    <div class="levels-grid" id="levels-grid">
+      <!-- Level cards will be dynamically inserted here -->
+    </div>
+  </div>
+
+  <script src="kanji-data.js"></script>
+  <script src="audio-data.js"></script>
+  <script src="js/shared.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
