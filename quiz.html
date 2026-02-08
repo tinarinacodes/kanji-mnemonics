@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kanji Quiz</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/quiz.css">
+</head>
+<body>
+  <div class="header">
+    <button class="back-btn" onclick="backToLevels()">← Back to Levels</button>
+    <h2 id="current-level-title">Level 1</h2>
+  </div>
+
+  <div class="level-info">
+    <div class="quiz-counter">
+      Quiz <span id="current-quiz">1</span> / 10
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+    </div>
+  </div>
+
+  <div class="quiz-container" id="quiz-container">
+    <!-- Quiz content will be dynamically inserted here -->
+  </div>
+
+  <div class="controls">
+    <button class="toggle-btn" id="romaji-toggle" onclick="toggleRomaji()">Romaji</button>
+    <button class="toggle-btn" id="furigana-toggle" onclick="toggleFurigana()">Furigana</button>
+  </div>
+
+  <!-- Popup Modal -->
+  <div class="popup-overlay" id="popup-overlay">
+    <div class="popup-container">
+      <div class="popup-kanji-display" id="popup-content">
+        <!-- Content will be dynamically inserted -->
+      </div>
+      
+      <div class="popup-swipe-dots" id="popup-dots">
+        <!-- Dots will be dynamically inserted -->
+      </div>
+      
+      <div class="popup-swipe-hint">Swipe or use arrows to see all kanji</div>
+      
+      <div class="popup-navigation">
+        <button class="popup-nav-btn" id="popup-prev" onclick="prevKanji()">← Previous</button>
+        <button class="popup-next-btn" onclick="closePopupAndContinue()">Next Quiz →</button>
+        <button class="popup-nav-btn" id="popup-next" onclick="nextKanji()">Next →</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="kanji-data.js"></script>
+  <script src="audio-data.js"></script>
+  <script src="js/shared.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
+</html>
