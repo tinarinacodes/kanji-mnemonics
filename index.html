@@ -1,27 +1,139 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kanji Learning Game</title>
-  <link rel="stylesheet" href="css/main.css">
+	<title>Kanji Learning Game</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<link rel="stylesheet" href="css/main.css" />
 </head>
-<body>
-  <!-- Level Selection Screen -->
-  <div id="level-selection-screen">
-    <div class="header">
-      <h1>🇯🇵 Kanji Learning</h1>
-      <button class="reset-btn" onclick="resetProgress()">Reset Progress</button>
-    </div>
-    
-    <div class="levels-grid" id="levels-grid">
-      <!-- Level cards will be dynamically inserted here -->
-    </div>
-  </div>
+<body class="homepage">
+	<div id="page-wrapper">
 
-  <script src="kanji-data.js"></script>
-  <script src="audio-data.js"></script>
-  <script src="js/shared.js"></script>
-  <script src="js/main.js"></script>
+		<!-- Header -->
+		<div id="header">
+			<!-- Inner -->
+			<div class="inner">
+				<header>
+					<h1><a href="index.html" id="logo">Kanji Learning</a></h1>
+					<hr />
+					<p>Master Japanese Characters Through Interactive Learning</p>
+				</header>
+				<footer>
+					<a href="#levels" class="button circled scrolly">Start Learning</a>
+				</footer>
+			</div>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="#levels">Levels</a></li>
+					<li><a href="#about">About</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<!-- Levels Section -->
+		<section id="levels" class="wrapper style2">
+			<div class="container">
+				<header class="major">
+					<h2>Choose Your Level</h2>
+					<p>Progress through 20 levels of kanji mastery</p>
+				</header>
+				
+				<div class="level-info-banner">
+					<div class="progress-container">
+						<div class="progress-label">Overall Progress</div>
+						<div class="progress-bar-outer">
+							<div class="progress-bar-inner" id="overall-progress"></div>
+						</div>
+					</div>
+					<button class="button small" onclick="resetProgress()">Reset Progress</button>
+				</div>
+
+				<div class="levels-grid" id="levels-grid">
+					<!-- Level cards will be dynamically inserted here -->
+				</div>
+			</div>
+		</section>
+
+		<!-- About Section -->
+		<div id="about" class="wrapper style1">
+			<section class="container special">
+				<header>
+					<h2>How It Works</h2>
+					<p>Learn kanji through mnemonic stories and interactive exercises</p>
+				</header>
+				<div class="row">
+					<article class="col-4 col-12-mobile special">
+						<span class="feature-icon">MN</span>
+						<header>
+							<h3>Mnemonic Quizzes</h3>
+						</header>
+						<p>
+							Learn kanji through visual stories that combine simpler characters into complex ones. 
+							Each mnemonic creates a memorable mental image.
+						</p>
+					</article>
+					<article class="col-4 col-12-mobile special">
+						<span class="feature-icon">WM</span>
+						<header>
+							<h3>Word Matching</h3>
+						</header>
+						<p>
+							Reinforce your learning by matching kanji with their English meanings. 
+							Practice makes perfect!
+						</p>
+					</article>
+					<article class="col-4 col-12-mobile special">
+						<span class="feature-icon">AU</span>
+						<header>
+							<h3>Audio Pronunciation</h3>
+						</header>
+						<p>
+							Listen to native pronunciation for each kanji. 
+							Learn both meaning and sound together.
+						</p>
+					</article>
+				</div>
+			</section>
+		</div>
+
+		<!-- Footer -->
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<section class="contact">
+							<header>
+								<h3>Ready to Start Learning?</h3>
+							</header>
+							<p>Begin your kanji journey today and unlock the beauty of Japanese characters.</p>
+						</section>
+
+						<div class="copyright">
+							<ul class="menu">
+								<li>&copy; Kanji Learning Game</li>
+								<li>Design: Helios by HTML5 UP</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="kanji-data.js"></script>
+	<script src="audio-data.js"></script>
+	<script src="js/shared.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/scroll.js"></script>
 </body>
 </html>
+
+
+

@@ -148,6 +148,11 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .word-match-instruction {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
   .word-match-grid {
     gap: 20px;
   }
@@ -159,14 +164,81 @@
   }
   
   .match-btn.kanji .kanji-text {
-    font-size: 28px;
+    font-size: 32px;
   }
   
   .match-btn.kanji .reading-text {
-    font-size: 10px;
+    font-size: 11px;
   }
   
   .match-btn.meaning {
     font-size: 16px;
+  }
+
+  .match-btn .audio-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+  }
+
+  .word-match-column h3 {
+    font-size: 18px;
+  }
+
+  .continue-btn {
+    padding: 14px 35px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .word-match-instruction {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .word-match-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .word-match-column h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .match-btn {
+    padding: 12px;
+    font-size: 15px;
+    min-height: 65px;
+  }
+
+  .match-btn.kanji .kanji-text {
+    font-size: 28px;
+  }
+
+  .match-btn.kanji .reading-text {
+    font-size: 10px;
+  }
+
+  .match-btn.meaning {
+    font-size: 15px;
+  }
+
+  .match-btn .audio-icon {
+    width: 26px;
+    height: 26px;
+    font-size: 14px;
+    top: 6px;
+    right: 6px;
+  }
+
+  .word-match-progress {
+    font-size: 16px;
+  }
+
+  .continue-btn {
+    padding: 12px 30px;
+    font-size: 15px;
   }
 }

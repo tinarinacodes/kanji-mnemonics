@@ -1,60 +1,91 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kanji Quiz</title>
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/quiz.css">
+	<title>Kanji Quiz</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="css/quiz.css" />
 </head>
-<body>
-  <div class="header">
-    <button class="back-btn" onclick="backToLevels()">← Back to Levels</button>
-    <h2 id="current-level-title">Level 1</h2>
-  </div>
+<body class="no-sidebar">
+	<div id="page-wrapper">
 
-  <div class="level-info">
-    <div class="quiz-counter">
-      Quiz <span id="current-quiz">1</span> / 10
-    </div>
-    <div class="progress-bar">
-      <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
-    </div>
-  </div>
+		<!-- Header -->
+		<div id="header">
+			<div class="inner">
+				<header>
+					<h1 id="current-level-title">Level 1</h1>
+				</header>
+			</div>
 
-  <div class="quiz-container" id="quiz-container">
-    <!-- Quiz content will be dynamically inserted here -->
-  </div>
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html#levels">Back to Levels</a></li>
+				</ul>
+			</nav>
+		</div>
 
-  <div class="controls">
-    <button class="toggle-btn" id="romaji-toggle" onclick="toggleRomaji()">Romaji</button>
-    <button class="toggle-btn" id="furigana-toggle" onclick="toggleFurigana()">Furigana</button>
-  </div>
+		<!-- Main -->
+		<div class="wrapper style1">
+			<div class="container">
+				
+				<!-- Progress Info -->
+				<div class="quiz-progress-section">
+					<div class="quiz-counter">
+						Quiz <span id="current-quiz">1</span> / 10
+					</div>
+					<div class="progress-bar-outer">
+						<div class="progress-bar-inner" id="progress-fill" style="width: 0%"></div>
+					</div>
+				</div>
 
-  <!-- Popup Modal -->
-  <div class="popup-overlay" id="popup-overlay">
-    <div class="popup-container">
-      <div class="popup-kanji-display" id="popup-content">
-        <!-- Content will be dynamically inserted -->
-      </div>
-      
-      <div class="popup-swipe-dots" id="popup-dots">
-        <!-- Dots will be dynamically inserted -->
-      </div>
-      
-      <div class="popup-swipe-hint">Swipe or use arrows to see all kanji</div>
-      
-      <div class="popup-navigation">
-        <button class="popup-nav-btn" id="popup-prev" onclick="prevKanji()">← Previous</button>
-        <button class="popup-next-btn" onclick="closePopupAndContinue()">Next Quiz →</button>
-        <button class="popup-nav-btn" id="popup-next" onclick="nextKanji()">Next →</button>
-      </div>
-    </div>
-  </div>
+				<!-- Quiz Container -->
+				<article id="main" class="special">
+					<div id="quiz-container">
+						<!-- Quiz content will be dynamically inserted here -->
+					</div>
 
-  <script src="kanji-data.js"></script>
-  <script src="audio-data.js"></script>
-  <script src="js/shared.js"></script>
-  <script src="js/quiz.js"></script>
+					<!-- Controls -->
+					<div class="controls">
+						<button class="button toggle-btn" id="romaji-toggle" onclick="toggleRomaji()">Romaji</button>
+						<button class="button toggle-btn" id="furigana-toggle" onclick="toggleFurigana()">Furigana</button>
+					</div>
+				</article>
+
+			</div>
+		</div>
+
+		<!-- Popup Modal -->
+		<div class="popup-overlay" id="popup-overlay">
+			<div class="popup-container">
+				<div class="popup-kanji-display" id="popup-content">
+					<!-- Content will be dynamically inserted -->
+				</div>
+				
+				<div class="popup-swipe-dots" id="popup-dots">
+					<!-- Dots will be dynamically inserted -->
+				</div>
+				
+				<div class="popup-swipe-hint">Swipe or use arrows to see all kanji</div>
+				
+				<div class="popup-navigation">
+					<button class="button small" id="popup-prev" onclick="prevKanji()">Previous</button>
+					<button class="button primary" onclick="closePopupAndContinue()">Next Quiz</button>
+					<button class="button small" id="popup-next" onclick="nextKanji()">Next</button>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="kanji-data.js"></script>
+	<script src="audio-data.js"></script>
+	<script src="js/shared.js"></script>
+	<script src="js/quiz.js"></script>
 </body>
 </html>
+
+

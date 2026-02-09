@@ -296,23 +296,155 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .mnemonic {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
   .equation {
     gap: 10px;
+    margin-bottom: 30px;
   }
   
   .kanji-box {
-    width: 80px;
-    height: 80px;
-    font-size: 36px;
-  }
-  
-  .option-btn {
     width: 70px;
     height: 70px;
     font-size: 32px;
+    border-width: 3px;
+  }
+
+  .placeholder {
+    font-size: 9px;
+    max-width: 60px;
+  }
+
+  .operator {
+    font-size: 28px;
   }
   
-  .mnemonic {
+  .option-btn {
+    width: 75px;
+    height: 75px;
+    font-size: 36px;
+  }
+
+  .options-container {
+    gap: 12px;
+  }
+
+  .audio-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .popup-container {
+    padding: 30px;
+    width: 95%;
+  }
+
+  .popup-kanji {
+    font-size: 100px;
+  }
+
+  .popup-reading {
+    font-size: 20px;
+  }
+
+  .popup-meaning {
     font-size: 18px;
+  }
+
+  .popup-audio-btn {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  .popup-nav-btn {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+
+  .popup-next-btn {
+    padding: 12px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mnemonic {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+
+  .equation {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .kanji-box {
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+    border-width: 2px;
+  }
+
+  .placeholder {
+    font-size: 8px;
+    max-width: 50px;
+  }
+
+  .operator {
+    font-size: 24px;
+  }
+
+  .option-btn {
+    width: 65px;
+    height: 65px;
+    font-size: 32px;
+    border-width: 2px;
+  }
+
+  .options-container {
+    gap: 10px;
+  }
+
+  .audio-icon {
+    width: 26px;
+    height: 26px;
+    font-size: 12px;
+    top: 3px;
+    right: 3px;
+  }
+
+  .popup-container {
+    padding: 20px;
+  }
+
+  .popup-kanji {
+    font-size: 80px;
+    margin-bottom: 15px;
+  }
+
+  .popup-reading {
+    font-size: 18px;
+  }
+
+  .popup-meaning {
+    font-size: 16px;
+  }
+
+  .popup-audio-btn {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+
+  .popup-navigation {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .popup-nav-btn, .popup-next-btn {
+    width: 100%;
+    padding: 12px 20px;
   }
 }

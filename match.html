@@ -1,39 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Word Match</title>
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/match.css">
+	<title>Word Match</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="css/match.css" />
 </head>
-<body>
-  <div class="header">
-    <button class="back-btn" onclick="backToLevels()">← Back to Levels</button>
-    <h2 id="current-level-title">Level 2</h2>
-  </div>
+<body class="no-sidebar">
+	<div id="page-wrapper">
 
-  <div class="level-info">
-    <div class="quiz-counter">
-      Round <span id="current-quiz">1</span> / 10
-    </div>
-    <div class="progress-bar">
-      <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
-    </div>
-  </div>
+		<!-- Header -->
+		<div id="header">
+			<div class="inner">
+				<header>
+					<h1 id="current-level-title">Level 2</h1>
+				</header>
+			</div>
 
-  <div class="quiz-container" id="quiz-container">
-    <!-- Word match content will be dynamically inserted here -->
-  </div>
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html#levels">Back to Levels</a></li>
+				</ul>
+			</nav>
+		</div>
 
-  <div class="controls">
-    <button class="toggle-btn" id="romaji-toggle" onclick="toggleRomaji()">Romaji</button>
-    <button class="toggle-btn" id="furigana-toggle" onclick="toggleFurigana()">Furigana</button>
-  </div>
+		<!-- Main -->
+		<div class="wrapper style1">
+			<div class="container">
+				
+				<!-- Progress Info -->
+				<div class="quiz-progress-section">
+					<div class="quiz-counter">
+						Round <span id="current-quiz">1</span> / 10
+					</div>
+					<div class="progress-bar-outer">
+						<div class="progress-bar-inner" id="progress-fill" style="width: 0%"></div>
+					</div>
+				</div>
 
-  <script src="kanji-data.js"></script>
-  <script src="audio-data.js"></script>
-  <script src="js/shared.js"></script>
-  <script src="js/match.js"></script>
+				<!-- Match Container -->
+				<article id="main" class="special">
+					<div id="quiz-container">
+						<!-- Word match content will be dynamically inserted here -->
+					</div>
+
+					<!-- Controls -->
+					<div class="controls">
+						<button class="button toggle-btn" id="romaji-toggle" onclick="toggleRomaji()">
+							Romaji
+						</button>
+						<button class="button toggle-btn" id="furigana-toggle" onclick="toggleFurigana()">Furigana</button>
+					</div>
+				</article>
+
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="kanji-data.js"></script>
+	<script src="audio-data.js"></script>
+	<script src="js/shared.js"></script>
+	<script src="js/match.js"></script>
 </body>
 </html>
+
+
+
